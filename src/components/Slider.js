@@ -1,11 +1,13 @@
 import React, { useState, useContext, createContext } from "react";
 import { sliderOptions } from "../utils/Options";
 import { C } from "../utils/Constants";
-import { CartContext } from "./../Context";
+import { CartContext, NotifyContext } from "./../Context";
 import Button from "./Button";
+import Notification from "./Notification";
 
 const Slider = () => {
   const [cart, setCart] = useContext(CartContext);
+  const [notify, setNotify] = useContext(NotifyContext);
 
   const [current, setCurrent] = useState(0);
   const length = sliderOptions.length;
@@ -28,6 +30,13 @@ const Slider = () => {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
+  };
+
+  const createNotification = () => {
+    setNotify(true);
+    setTimeout(() => {
+      setNotify(false);
+    }, 1500);
   };
 
   return (
@@ -65,7 +74,10 @@ const Slider = () => {
                       </div>
                       <Button
                         name={C.purchase}
-                        action={() => addToCart(sliderOptions[index])}
+                        action={() => {
+                          addToCart(sliderOptions[index]);
+                          createNotification();
+                        }}
                       />
                     </div>
                   </div>

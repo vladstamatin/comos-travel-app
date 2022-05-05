@@ -1,0 +1,43 @@
+.notification-box {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 1px solid $hover-element;
+  padding: 50px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 6px;
+  opacity: 0;
+  animation-name: slide-animation;
+  animation-duration: 1.5s;
+}
+
+.notification-box {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30.895px;
+  line-height: 35px;
+  color: $gray-text;
+}
+
+@keyframes slide-animation {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    opacity: 1;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+// .notification-animation {
+//   opacity: 0;
+//   animation-name: slide-animation;
+//   animation-duration: 2s;
+// }
