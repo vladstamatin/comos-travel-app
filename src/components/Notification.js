@@ -12,7 +12,7 @@ const Notification = () => {
           {cart.length > 0
             ? "New flight added to your cart. Destination: " +
               cart[cart.length - 1].name
-            : "Checkout routes"}
+            : "Checkout flights"}
         </span>
       </div>
     );
