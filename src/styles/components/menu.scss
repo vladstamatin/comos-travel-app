@@ -1,0 +1,55 @@
+.menubar {
+  width: 100%;
+  height: 60px;
+  background-color: $menu-and-footer-bg-color;
+  display: flex;
+  justify-content: center;
+}
+.menu-content {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: $gray-text;
+  gap: 2.5rem;
+}
+.menu-content .link-style {
+  outline: none;
+  text-decoration: none;
+  border-bottom: none;
+  list-style: none;
+  color: $gray-text;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  height: 25px;
+  padding: 8px;
+}
+.menu-content .link-style:hover {
+  background-color: $hover-element;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.logotype {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35.861px;
+  line-height: 41px;
+  color: #a9b5cc;
+}
+
+.shopping-cart {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+@media (max-width: 1100px) {
+  .menu-content {
+    width: 90%;
+    gap: 0.4rem;
+  }
+}

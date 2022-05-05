@@ -1,0 +1,15 @@
+$background-color: #1b212b;
+$menu-and-footer-bg-color: #141922;
+$gray-text: #a9b5cc;
+$white-text: #ffffff;
+$button-color: #46c351;
+$hover-element: #2d333d;
+$border-color: #181d26;
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu"), local("Ubuntu shefiff-Regular"),
+    url("../../assets/fonts/Ubuntu-Regular.ttf") format("woff");
+}

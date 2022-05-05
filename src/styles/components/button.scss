@@ -1,0 +1,30 @@
+.default-button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+  height: 36px;
+  width: max(130px);
+  border-radius: 7px;
+
+  border: 1px solid $border-color;
+  background-color: $button-color;
+  color: $white-text;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  box-shadow: 0 2px $gray-text;
+}
+
+.default-button:active {
+  box-shadow: 0 1px $gray-text;
+  transform: translateY(1px);
+}

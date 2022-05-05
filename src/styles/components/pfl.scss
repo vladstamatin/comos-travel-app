@@ -1,0 +1,119 @@
+.pfl-container {
+  width: 100%;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+}
+
+.pfl-flex {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: ". . . . . . enjoy-box";
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  color: white;
+}
+
+.pfl-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: $gray-text;
+}
+
+.pfl-box span::first-letter {
+  font-weight: 700;
+}
+
+.enjoy-message-box {
+  padding: 25px 50px 25px 50px;
+
+  background-color: $hover-element;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22.66px;
+  line-height: 26px;
+  color: $gray-text;
+  grid-area: enjoy-box;
+}
+.enjoy-message-box span:nth-child(1) {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 51.223px;
+  line-height: 59px;
+}
+@media (max-width: 1450px) {
+  .pfl-flex {
+    grid-template-areas:
+      ". . . . . ."
+      "enjoy-box enjoy-box enjoy-box enjoy-box enjoy-box enjoy-box";
+  }
+}
+
+@media (max-width: 768px) {
+  .pfl-flex {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+
+// Pfl description
+
+.checkout-container {
+  width: 60%;
+  margin: 0 auto;
+  color: $gray-text;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout-title {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 29.711px;
+  line-height: 34px;
+}
+.checkout-title::first-letter {
+  font-weight: 700;
+}
+
+.checkout-description {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  max-width: 700px;
+  text-align: justify;
+}
+
+.horizontal-line {
+  height: 1px;
+  width: 50%;
+  background-color: $hover-element;
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    width: 90%;
+  }
+}
