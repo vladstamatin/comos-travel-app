@@ -8,7 +8,6 @@ import Notification from "./Notification";
 const Slider = () => {
   const [cart, setCart] = useContext(CartContext);
   const [notify, setNotify] = useContext(NotifyContext);
-
   const [current, setCurrent] = useState(0);
   const length = sliderOptions.length;
 
@@ -45,45 +44,43 @@ const Slider = () => {
       <div className="slider-box">
         {sliderOptions.map((slide, index) => {
           return (
-            <div key={index}>
-              {index === current && (
-                <div className="destinations-slider">
-                  <div className="destination-image">
-                    <div className="destination-short-description">
-                      <span>{slide.name.toUpperCase()}</span>
-                      <span>{slide.location}</span>
-                      <span>
-                        {C.distance}: {slide.distance}
-                      </span>
-                      <span>
-                        {C.population}: {slide.population}
-                      </span>
-                    </div>
-                    <img src={slide.image} alt="not loaded" />
+            index === current && (
+              <div className="destinations-slider" key={index}>
+                <div className="destination-image">
+                  <div className="destination-short-description">
+                    <span>{slide.name.toUpperCase()}</span>
+                    <span>{slide.location}</span>
+                    <span>
+                      {C.distance}: {slide.distance}
+                    </span>
+                    <span>
+                      {C.population}: {slide.population}
+                    </span>
                   </div>
+                  <img src={slide.image} alt="not loaded" />
+                </div>
 
-                  <div className="destination-description">
-                    <div className="destination-long-description">
-                      <span>{slide.name}</span>
-                      <span>{slide.description}</span>
+                <div className="destination-description">
+                  <div className="destination-long-description">
+                    <span>{slide.name}</span>
+                    <span>{slide.description}</span>
+                  </div>
+                  <div className="destination-price">
+                    <div className="destination-price-container">
+                      <span>{slide.price}</span>
+                      <span>{slide.ticketType}</span>
                     </div>
-                    <div className="destination-price">
-                      <div className="destination-price-container">
-                        <span>{slide.price}</span>
-                        <span>{slide.ticketType}</span>
-                      </div>
-                      <Button
-                        name={C.purchase}
-                        action={() => {
-                          addToCart(sliderOptions[index]);
-                          createNotification();
-                        }}
-                      />
-                    </div>
+                    <Button
+                      name={C.purchase}
+                      action={() => {
+                        addToCart(sliderOptions[index]);
+                        createNotification();
+                      }}
+                    />
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )
           );
         })}
       </div>

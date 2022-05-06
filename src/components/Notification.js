@@ -4,7 +4,6 @@ import { CartContext, NotifyContext } from "./../Context";
 const Notification = () => {
   const [cart, setCart] = useContext(CartContext);
   const [notify, setNotify] = useContext(NotifyContext);
-
   if (notify)
     return (
       <div className={"notification-box"}>

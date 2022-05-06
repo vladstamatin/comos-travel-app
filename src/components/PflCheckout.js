@@ -12,13 +12,14 @@ const PflCheckout = () => {
   };
 
   const createNotification = () => {
-    setNotify(true);
+    console.log(cart.length);
+    if (cart.length > 0) setNotify(true);
+
     setTimeout(() => {
       setNotify(false);
     }, 1500);
   };
 
-  console.log(cart);
   return (
     <div className="checkout-container">
       <div className="checkout-title">{C.pflPackageTitle}</div>
