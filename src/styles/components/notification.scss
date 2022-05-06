@@ -7,9 +7,9 @@
   margin: 10px;
   width: 300px;
   border-radius: 6px;
-  opacity: 0;
-  animation-name: slide-animation;
-  animation-duration: 1.5s;
+  opacity: 1;
+  // animation-name: slide-animation;
+  // animation-duration: 3s;
 }
 
 .notification-box {
@@ -23,10 +23,6 @@
 
 @keyframes slide-animation {
   0% {
-    opacity: 0;
-    display: none;
-  }
-  50% {
     opacity: 1;
     display: flex;
   }
@@ -36,8 +32,8 @@
   }
 }
 
-// .notification-animation {
-//   opacity: 0;
-//   animation-name: slide-animation;
-//   animation-duration: 2s;
-// }
+.notify-animation {
+  opacity: 0;
+  animation-name: slide-animation;
+  animation-duration: 2s;
+}

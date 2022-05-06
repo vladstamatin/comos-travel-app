@@ -33,9 +33,6 @@ const Slider = () => {
 
   const createNotification = () => {
     setNotify(true);
-    setTimeout(() => {
-      setNotify(false);
-    }, 1500);
   };
 
   return (

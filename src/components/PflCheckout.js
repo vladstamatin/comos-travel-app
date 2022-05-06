@@ -12,12 +12,7 @@ const PflCheckout = () => {
   };
 
   const createNotification = () => {
-    console.log(cart.length);
     if (cart.length > 0) setNotify(true);
-
-    setTimeout(() => {
-      setNotify(false);
-    }, 1500);
   };
 
   return (
