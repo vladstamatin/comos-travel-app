@@ -10,6 +10,7 @@ const Notification = () => {
       setNotify(false);
     }, 1500);
   });
+
   return (
     <div
       className={
