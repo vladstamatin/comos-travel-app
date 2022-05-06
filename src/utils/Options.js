@@ -57,7 +57,7 @@ export const sliderOptions = [
     distance: "633.14 million km",
     population: "Nitrogen, Methane, Hydrogen",
     description:
-      "Saturn’s largest moon Titan is an extraordinary and exceptional world. Among our solar system’s more than 150 known moons, Titan is the only one with a substantial atmosphere. \n\nAnd of all the places in the solar system, Titan is the only place besides Earth known to have liquids in the form of rivers, lakes and seas on its surface.",
+      "Among our solar system’s more than 150 known moons, Titan is the only one with a substantial atmosphere. \n\nAnd of all the places in the solar system, Titan is the only place besides Earth known to have liquids in the form of rivers, lakes and seas on its surface.",
     price: "333.333 €",
     ticketType: "return ticket",
   },
